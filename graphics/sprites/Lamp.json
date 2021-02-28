@@ -1,0 +1,180 @@
+{ "frames": [
+   {
+    "filename": "Lamp 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 1.aseprite",
+    "frame": { "x": 14, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 2.aseprite",
+    "frame": { "x": 28, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 3.aseprite",
+    "frame": { "x": 42, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 4.aseprite",
+    "frame": { "x": 56, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 5.aseprite",
+    "frame": { "x": 70, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 6.aseprite",
+    "frame": { "x": 84, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 7.aseprite",
+    "frame": { "x": 98, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 8.aseprite",
+    "frame": { "x": 112, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 9.aseprite",
+    "frame": { "x": 126, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 10.aseprite",
+    "frame": { "x": 140, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 11.aseprite",
+    "frame": { "x": 154, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 12.aseprite",
+    "frame": { "x": 168, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 13.aseprite",
+    "frame": { "x": 182, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 14.aseprite",
+    "frame": { "x": 196, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 15.aseprite",
+    "frame": { "x": 210, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 16.aseprite",
+    "frame": { "x": 224, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   },
+   {
+    "filename": "Lamp 17.aseprite",
+    "frame": { "x": 238, "y": 0, "w": 14, "h": 34 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 14, "h": 34 },
+    "sourceSize": { "w": 14, "h": 34 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.25-dev",
+  "image": "Lamp.png",
+  "format": "RGBA8888",
+  "size": { "w": 252, "h": 34 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}
