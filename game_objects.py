@@ -26,7 +26,6 @@ class Sprite(pg.sprite.Sprite):
         self.w = self.sheet_info["frames"][0]["frame"]["w"]
         self.h = self.sheet_info["frames"][0]["frame"]["h"]
     
-        
         #Scale sprite
         self.scale = scale
         self.w = int(self.w * scale)
@@ -34,7 +33,6 @@ class Sprite(pg.sprite.Sprite):
         new_w_sheet = int(self.sheet_info["meta"]["size"]["w"] * scale)
         new_h_sheet = int(self.sheet_info["meta"]["size"]["h"] * scale)
         self.sheet = pg.transform.scale(self.sheet, (new_w_sheet, new_h_sheet))
-
 
         self.idx = 0
         self._generate_rects()   
@@ -83,6 +81,34 @@ class Lamp(Sprite):
     def calc_dist(self, other):
         return math.sqrt((other.rect.center[0] - self.rect.center[0]) ** 2 + (other.rect.center[1] - self.rect.center[1]) ** 2)
 
+
+    def collition_calculation(self, direction, other, bump_factor=1):
+        collition_vect = (other.rect.centerx - self.rect.centerx, other.rect.centery - self.rect.centery)
+
+        direction_abs = math.sqrt(direction[0]**2 + direction[1]**2)
+        direction_norm = (direction[0] / direction_abs, direction[1] / direction_abs)
+
+        collition_vect_abs = math.sqrt(collition_vect[0]**2 + collition_vect[1]**2)
+        collition_vect_norm = (collition_vect[0]/collition_vect_abs, collition_vect[1]/collition_vect_abs)
+
+        angle = math.atan2(collition_vect_norm[1], collition_vect_norm[0]) - math.atan2(direction_norm[1], direction_norm[0])
+
+        print(angle / math.pi * 180)
+        if angle > 0 and angle < math.pi/2:
+            dir = -1
+        elif angle < 0 and angle > -math.pi/2:
+            dir = 1
+        elif angle == 0:
+            dir = 1
+            bump_factor = 0
+        else:
+            return direction
+
+        new_direction = (bump_factor * (collition_vect_norm[0] * math.cos(dir * math.pi / 2) - collition_vect_norm[1] * math.sin(dir * math.pi / 2)),
+                         bump_factor * (collition_vect_norm[0] * math.sin(dir * math.pi / 2) + collition_vect_norm[1] * math.cos(dir * math.pi / 2)))
+
+        return new_direction
+
     def move(self, movement=(0,0)):
         self.rect.x += movement[0]
         self.rect.y += movement[1]
@@ -91,13 +117,9 @@ class Lamp(Sprite):
                 if not sprite is self:
                     if sprite.rect.colliderect(self.rect):
                         if self.calc_dist(sprite) < (self.r + sprite.r):
-                            self.rect.x -= movement[0]
-                            if self.calc_dist(sprite) < (self.r + sprite.r):
-                                self.rect.x += movement[0]
-                                self.rect.y -= movement[1]
-                                if self.calc_dist(sprite) < (self.r + sprite.r):
-                                    self.rect.x -= movement[0]
-                            
+                            move = self.collition_calculation(movement, sprite, bump_factor=10)
+                            self.rect.x += move[0] - movement[0]
+                            self.rect.y += move[1] - movement[1]                            
 
         self._move_light()
 
