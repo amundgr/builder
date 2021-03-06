@@ -1,5 +1,6 @@
 import sys
 import math
+import random
 
 import pygame as pg
 
@@ -25,12 +26,8 @@ lamp.move((0,0))
 game_object_group.add(lamp)
 light_group.add(lamp.light)
 
-lamp2 = Lamp(position=(0,0), scale=4, tag="lamp_2")
-lamp2.rect.center  = (500,500)
-lamp2.move((0,0))
 
-game_object_group.add(lamp2)
-#light_group.add(lamp2.light)
+npc_lamps = []
 
 while True:
     for event in pg.event.get():
@@ -46,6 +43,12 @@ while True:
                 lamp.move((10,0))
             if event.key == pg.K_a:
                 lamp.move((-10,0))
+            if event.key == pg.K_g:
+                npc_lamps.append(Lamp(position=(0,0), scale=4, tag="lamp_2"))
+                npc_lamps[-1].rect.center  = (random.randint(0,size[0]-1),random.randint(0,size[1]-1))
+                npc_lamps[-1].move((0,0))
+                game_object_group.add(npc_lamps[-1])
+                light_group.add(npc_lamps[-1].light)
 
     # Hard coed moving
     
@@ -66,18 +69,17 @@ while True:
     main_screen.fill((100, 100, 100, 255))
     game_object_surface.fill((100,100,100,255))
     light_surface.fill((0,0,0,255))
-    #lamp.move_to((0, 0))
+
     game_object_group.update()
     for i, obj in enumerate(sorted(game_object_group, key=lambda s: s.rect.y, reverse=False)):
         game_object_surface.blit(obj.image, (obj.rect.x, obj.rect.y))
-    #game_object_group.draw(game_object_surface)
-    light_group.update()
-    #light_group.draw(light_surface)
-    #print("Edge:", lamp.light.image.get_at((0, 0)))
-    #print("Center:", lamp.light.image.get_at((210, 0)))
     main_screen.blit(game_object_surface, (0,0))
+
+
+    light_group.update()
     for light in light_group:
         light_surface.blit(light.image, (light.rect.x, light.rect.y), special_flags=BLEND_RGBA_MIN)
     main_screen.blit(light_surface, (0,0))
+
     pg.display.update()
-    clock.tick(20)
+    print(clock.tick(20))
